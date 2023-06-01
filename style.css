@@ -2,9 +2,7 @@
 
 * {
     box-sizing: border-box;
-}
-
-body {
+    font-family: "roboto";
     margin: 0px;
     padding: 0px;
 }
@@ -16,11 +14,13 @@ body {
     justify-content: space-around;
     align-items: center;
     background-color: #1f2937;
+    min-height: 50px;
 }
 
 .logo {
     color: #F9FAF8;
     font-size: 24px;
+    font-weight: 800;
 }
 
 .header-links {
@@ -30,8 +30,6 @@ body {
 
 li {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
 }
 
 .links {
@@ -44,14 +42,17 @@ li {
 .hero {
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    gap: 32px;
+    gap: 64px;
     background-color: #1f2937;
-    padding: 64px;
+    padding: 100px;
+    overflow: hidden;
 }
 
 .hero-text {
-    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 500px;
 }
 
 .hero-main-text {
@@ -63,22 +64,25 @@ li {
 .hero-sub-text {
     font-size: 18px;
     color: #E5E7EB;
+    margin-bottom: 16px;
 }
 
 .hero-image {
     background-color: #E5E7EB;
-    width: 30vw;
+    width: 500px;
+    height: 200px;
     text-align: center;
 }
 
 .button-hero {
     background: #3882F6;
     cursor: pointer;
-    padding: 8px 16px;
     border: 1px solid royalblue;
     border-radius: 8px;
+    font-weight: 800;
     color: white;
-    
+    width: 100px;
+    height: 40px;
 }
 
 /* Info and Card Area */
@@ -88,6 +92,14 @@ li {
     font-size: 36px;
     font-weight: 900;
     color: #1F2937;
+    margin: 32px 0px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    text-align: center;
 }
 
 .card-area {
@@ -98,43 +110,38 @@ li {
     margin-bottom: 64px;
 }
 
-.card-container {
-    display: flex;
-    flex-direction: column;
-    flex: 0;
-    align-items: center;
-    text-align: center;
-}
-
 .card {
     border: 3px solid #3882F6;
-    border-radius: 25px;
-    height: 200px;
-    width: 200px;
+    border-radius: 15px;
+    height: 150px;
+    width: 150px;
+    margin-bottom: 8px;
 }
 
 /* -- Quote Area --*/
 
 .quote-container {
     display: flex;
+    justify-content: center;
     background-color: #E5E7EB;
     padding: 64px 128px;
+}
+
+.quote {
+    max-width: 800px;
 }
 
 .quote-text {
     font-size: 36px;
     font-style: italic;
     color: #1F2937;
-    padding: 0px;
-    margin: 0px;
+    margin: 8px 0px;
 }
 
 .quote-author {
     font-size: 18px;
     font-weight: bold;
     text-align: right;
-    padding: 0px;
-    margin: 0px;
 }
 
 /* -- Call to Action -- */
@@ -148,33 +155,31 @@ li {
 
 .call-to-action {
     display: flex;
+    gap: 64px;
     justify-content: space-around;
+    align-items: center;
     background-color: #3882F6;
-    padding: 32px 64px;
+    padding: 24px 64px;
     border-radius: 10px;
-    width: 75vw;
     color: white;
 }
 
 .call-to-action-text-main {
     font-size: 18px;
     font-weight: bold;
-    padding: 0px;
-    margin: 0px;
-}
-
-.call-to-action-text-subtitle {
-    padding: 0px;
-    margin: 0px;
 }
 
 .button-call-to-action {
     background: #3882F6;
     cursor: pointer;
-    padding: 0px 24px;
     border: 1px solid white;
     border-radius: 8px;
     color: white;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 8px 16px;
+    min-width: 150px;
+    max-height: 50px;
 }
 
 /* -- Footer -- */
@@ -184,4 +189,5 @@ li {
     text-align: center;
     padding: 16px;
     color: white;
+    min-height: 50px;
 }
